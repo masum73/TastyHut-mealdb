@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,49 @@
     <!-- daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-    <header>
 
+<body>
+    <header class="w-4/5 mx-auto">
+        <!-- navbar -->
+        <nav class="navbar bg-base-100">
+            <div class="navbar-start">
+                <img src="images/Tasty_HUT.png" alt="">
+            </div>
+            <div class="navbar-end">
+                <button class= "py-2 px-5 ml-3 text-white text-lg rounded bg-yellow-500 font-semibold hover:text-black">Sign Up</button>
+            </div>
+        </nav>
+        <!-- banner start -->
+        <div class="h-screen pt-20 bg-[url('images/banner_1.png')] bg-cover mb-32">
+            <div class="h-full max-w-7xl mx-auto px-5 flex justify-center items-center">
+                <div class="text-center text-white">
+                    <h1 class="text-7xl font-eg">Taste Our Delicious</h1>
+                    <h1 class="text-7xl font-eg mt-5">Best Foods</h1>
+                    <p class=" text-2xl mt-10 w-10/12 mx-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+
+                    <!-- search from flow bite - modified it START -->
+                    <form class="md:flex items-center mt-5">
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 ">
+                            </div>
+                            <input type="text" id="voice-search"
+                                class="mb-5 md:mb-0 bg-white text-black text-lg rounded-lg block w-full pl-10 p-2.5 "
+                                placeholder="Search any food" required>
+                        </div>
+                        <button type="submit"
+                            class="py-2 px-5 ml-3 text-white text-lg rounded bg-yellow-500 font-semibold  hover:text-black">Search
+                        </button>
+                    </form>
+                    <!-- search from flow bite - modified it END -->
+                </div>
+            </div>
+        </div>
+        <!-- banner end -->
     </header>
 
     <main>
         <section>
-            <h1 class="text-5xl text-center text-blue-600 my-12">Welcome</h1>
+
         </section>
     </main>
 
@@ -28,4 +64,5 @@
     <!-- js file -->
     <script src="js/app.js"></script>
 </body>
+
 </html>
