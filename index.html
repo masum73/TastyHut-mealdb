@@ -25,8 +25,8 @@
         <div class="h-screen pt-20 bg-[url('images/banner_1.png')] bg-cover mb-24">
             <div class="h-full max-w-7xl mx-auto px-5 flex justify-center items-center">
                 <div class="text-center text-white">
-                    <h1 class="text-7xl font-eg">Taste Our Delicious</h1>
-                    <h1 class="text-7xl font-eg mt-5">Best Foods</h1>
+                    <h1 class="text-7xl">Taste Our Delicious</h1>
+                    <h1 class="text-7xl mt-5">Best Foods</h1>
                     <p class=" text-2xl mt-10 w-10/12 mx-auto">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
 
                     <!-- search from flow bite - modified it START -->
@@ -50,7 +50,7 @@
     </header>
 
     <main>
-        <h1 class="text-7xl font-eg text-black text-center mb-12">Your Favorite Food</h1>
+        <h1 class="text-7xl text-black text-center mb-12">Your Favorite Food</h1>
         <section class="w-4/5 mx-auto">
             <div class="grid grid-cols-2 gap-3">
                 <!-- card from flow bite -->
@@ -122,8 +122,53 @@
         
     </main>
 
-    <footer>
+    <footer class="bg-amber-100 h-[1200px] md:h-[700px] lg:h-[400px] mt-20 mx-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 justify-center items-center text-left h-full mx-auto px-10 container">
+            <div class="text-silver">
+                <h1 class="text-2xl text-black  mt-10 gap-5">Section</h1>
+                <h6 class="text-sm mt-10">Home</h6>
+                <h6 class="text-sm my-4">Features</h6>
+                <h6 class="text-sm">Pricing</h6>
+                <h6 class="text-sm my-4">FAQs</h6>
+                <h6 class="text-sm">About</h6>
+            </div>
+            <div class="text-silver">
+                <h1 class="text-2xl text-black mt-6 gap-5">Section</h1>
+                <h6 class="text-sm mt-10">UI/UX Design</h6>
+                <h6 class="text-sm my-4">Product Design</h6>
+                <h6 class="text-sm">Backend Developer</h6>
+                <h6 class="text-sm my-4">Frontend Developer</h6>
+            </div>
+            <div class="text-silver">
+                <h1 class="text-2xl text-black mt-6">Resources</h1>
+                <h6 class="text-sm mt-10">FAQ</h6>
+                <h6 class="text-sm my-4">Support</h6>
+                <h6 class="text-sm">Privacy Policy</h6>
+                <h6 class="text-sm my-4">Terms of Service</h6>
+            </div>
+            <div>
+                <h1 class="text-2xl text-black mt-14">Subscribe to our newsletter</h1>
+                <p class="text-sm text-silver mt-10">There are many variations of passages of available, but the majority have suffered.</p>
 
+                <!-- email , search form flow bite - modified it START -->
+                <form>
+                    <div class="flex mt-5">
+                        <label for="search-dropdown" class="mb-2 text-sm font-medium text-silver sr-only">Your
+                            Email</label>
+                        <div class="relative w-full">
+                            <input type="search" id="search-dropdown"
+                                class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-md border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Email Address" required>
+                            <button type="submit"
+                                class="py-2 px-5 my-3 text-white text-lg rounded bg-yellow-500 font-semibold  hover:text-black">Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- email , search from flow bite - modified it END -->
+            </div>
+        </div>
     </footer>
 
     <!-- daisy ui script / tailwind CDN -->
