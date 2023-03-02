@@ -1,18 +1,22 @@
+let meals = [];
+
 const loadData = async() => {
    try{
     const URL = `https://www.themealdb.com/api/json/v1/1/search.php?s=Chicken`;
     const res = await fetch(URL);
     const data = await res.json();
-    displayData(data);
+    //console.log(data);
+    meals = data.meals;
+    //console.log(meals.slice(0,6));
+    displayData(meals.slice(0,6));
    }catch(error){
     console.log(error);
    }
 }
 const displayData = (data) => {
-   const multipleMeals = data.meals;
-   //console.log(multipleMeals);
+   //console.log(data);
 
-   multipleMeals.forEach(singleMeal => {
+   data.forEach(singleMeal => {
         //console.log(singleMeal);
         const {strMealThumb, strArea, strMeal, strInstructions} = singleMeal;
         const cardContainer = document.getElementById('card-parent-container');
@@ -39,6 +43,7 @@ const loadMealDetails = async (id) => {
     const url =`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
     const res = await fetch(url);
     const data = await res.json();
+    //console.log(data);
     displayModalData(data.meals[0]);
 }
 
@@ -48,6 +53,7 @@ const displayModalData = (data) => {
     const modalContainer = document.getElementById('modal-container');
     const modalDiv = document.createElement('div');
     modalDiv.classList.add('modal-box', 'relative');
+    modalContainer.innerHTML = '';
     modalDiv.innerHTML = `
         <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
         <h3 class="text-lg font-bold">${strMeal}</h3>
@@ -55,5 +61,18 @@ const displayModalData = (data) => {
         <p class="py-4">Instructions: ${strInstructions}}</p>
     `
     modalContainer.appendChild(modalDiv);
+    //modalContainer.innerHTML = modalDiv.innerHTML;
 }
+
+const ShowAllDataTogether = () => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=Chicken`)
+      .then((res) => res.json())
+      .then((data) => {
+        meals = data.meals;
+        //console.log(meals);
+        displayData(meals);
+      });
+  };
+
 loadData();
+
